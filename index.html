@@ -12,7 +12,15 @@
 </head>
 <body>
   <div class="wrapper">
-    <button id="btn" class="btn">Расчитать длину теплицы</button>
+    <div class="input__wrapper">
+      <input class="input__cell input__1" type="tel" name="length_10m" placeholder="Цена теплицы 10м">
+      <input class="input__cell input__2" type="tel" name="length_8m" placeholder="Цена теплицы 8м">
+      <input class="input__cell input__3" type="tel" name="length_more" placeholder="Длина желаемой теплицы более 10м и кратно 2м">
+    </div>
+    <button id="btn" class="btn btn--disabled">Расчитать цену теплицы</button>
+    <div class="text-result">
+      <h2>Теплица длиной <span class="length-total">0</span>м стоит: <span class="price-total">0</span>р.</h2>
+    </div>
   </div>
 
   <script src="./app.js"></script>

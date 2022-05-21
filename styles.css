@@ -29,19 +29,79 @@ a:active {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.input__wrapper {
+  display: grid;
+  margin-bottom: 20px;
+  grid-template-areas: "A B"
+    "C C";
+  gap: 20px;
+}
+
+.input__1 {
+  grid-area: A;
+}
+
+.input__2 {
+  grid-area: B;
+}
+
+.input__3 {
+  grid-area: C;
+}
+
+.input__cell {
+  padding: 10px 5px;
+  border-radius: 3px;
+  border: 2px solid #29b0d900;
+  transition: 150ms;
+}
+
+.input__cell:focus {
+  border: 2px solid #06556dbd;
+  box-shadow: 1px 1px 5px 2px #06556d46;
+}
+
+.input__cell:hover {
+  border: 2px solid #06556dbd;
+}
+.input__cell.input--disabled {
+  border: 2px solid #bd2525bb;
 }
 
 .btn {
-  padding: 20px 32px;
+  width: 320px;
+  height: 65px;
   font-size: 22px;
-  border-radius: 10px;
+  border-radius: 4px;
   background: rgb(231, 231, 231);
-  box-shadow: 0 2px 4px 0 rgba(0,0,0, 0.2);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: all 250ms;
+}
+
+.btn--disabled {
+  cursor: not-allowed;
+}
+
+.btn[disabled] {
+  cursor: not-allowed;
 }
 
 .btn:hover {
   background: rgb(255, 255, 255);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.42);
+}
+
+.btn.btn--disabled {
+  cursor: not-allowed;
+  background: rgb(231, 231, 231);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2)
+}
+
+.text-result {
+  margin-top: 20px;
+  color: #fff;
 }
